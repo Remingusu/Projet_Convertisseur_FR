@@ -1,9 +1,0 @@
-Leween:
-    Key error: '9' (lorsque j'ai essayer d'accéder au dictionnaire car c'était un str)
-    Key error: 'A' (parce que j'ai inversé les lettres et les chiffres)
-            dico = {0: 0000, 1: 0001, ..., 10: 'A', 11: 'B', 12: 'C', 13: 'D', 14: 'E', 15: 'F'}
-        Solution:
-            dico = {'0': '0000', '1': '0001', ... 'A': '1010', 'B': '1011', 'C': '1100', 'D': '1101', 
-                    'E': '1110', 'F': '1111'}
-    
-    ValueError: invalid literal for int() with base 10: 'CA10' (j'ai mis un int() devant le input en base 16)
