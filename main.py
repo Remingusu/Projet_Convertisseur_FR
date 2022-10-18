@@ -15,9 +15,12 @@ exposant = 0 # mettre exposant a 0
 char_pos = -1 # mettre char_pos a -1
 for i in range(len(nbr)): # ajouter 1 a i, le nombre de fois qu'il y a de caractère dans nbr
     code_char = ord(nbr[char_pos]) # récup code ascii décimal c
-    if 65<=code_char<=70 or 97<=code_char<=102: # verif si le code_char est entre 65 et 70 ou 97 et 102
+    if 65<=code_char<=70: # verif si le code_char est entre 65 et 70 
         code_char = code_char - 55 # si oui, retirer 55 a code_char
         result += code_char * (16**exposant) # puis multiplier par 16**exposant le code_char-55
+    elif 97<=code_char<=102:# verif si le code_char est entre 97 et 102
+        code_char = code_char - 87 # si oui, retirer 87 a code_char
+        result += code_char * (16**exposant) # puis multiplier par 16**exposant le code_char-87
     else: # sinon
         result += int(nbr[char_pos]) * (16**exposant) # multiplier par 16**exposant le caractère transformé en int() et l'ajouter a result
     exposant += 1 # ajouter un a l'exposant
