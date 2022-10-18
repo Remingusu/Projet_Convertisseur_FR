@@ -1,4 +1,4 @@
-"""
+
 loop=True
 while loop: # boucle tant que loop est True
     enter_base = int(input("Base d'entrée (aucun effet): ")) # demande la base du nombre
@@ -7,7 +7,6 @@ while loop: # boucle tant que loop est True
         print("Une des bases n'est pas conforme.") # si non, afficher la phrase
     else: # sinon
         loop=False # fin de la boucle
-"""
 nbr = input(f"Nombre en base 16 à convertir en base 2: ") # demande le nombre
 
 # Base 16 --> base 10
@@ -25,18 +24,17 @@ for i in range(len(nbr)): # ajouter 1 a i, le nombre de fois qu'il y a de caract
     char_pos -= 1 # retirer 1 à char_pos
 
 # Base 10 --> 16
-binary=""
-i=0
-while result!=0:
-    if i==4:
-        #i=0
-        #binary=" "+binary
-        if result%2==1:
-            binary="1"+binary
-            result=result//2
-        else: # sinon
-            binary="0"+binary
-            result=result//2
-    #i+=1
+binary="" # nombre binaire à 0
+i=0 # i a 0
+while result!=0: # tant que le résultat est différent de 0; si non, rien
+    if i==4: # verif si i égale 4
+        i=0 # si oui, i à 0
+        binary=" "+binary # ajouter un espace
+    if result%2==1:# verif si le résultat divisé par 2 à son reste égale à 1
+        binary="1"+binary # si oui, ajouter 1 devant binary
+    else: # sinon
+        binary="0"+binary # ajouter 0 devant binary
+    result=result//2 # diviser result par 2
+    i+=1 # ajouter 1 a i
 
 print("La conversition en base 2 est:", binary)
