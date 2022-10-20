@@ -1,4 +1,3 @@
-
 loop=True
 while loop: # boucle tant que loop est True
     enter_base = int(input("Base d'entrée (aucun effet): ")) # demande la base du nombre
@@ -14,19 +13,19 @@ result = 0 # mettre result a 0
 exposant = 0 # mettre exposant a 0
 char_pos = -1 # mettre char_pos a -1
 for i in range(len(nbr)): # ajouter 1 a i, le nombre de fois qu'il y a de caractère dans nbr
-    code_char = ord(nbr[char_pos]) # récup code ascii décimal c
-    if 65<=code_char<=70: # verif si le code_char est entre 65 et 70 
+    code_char = ord(nbr[char_pos]) # récup code ascii décimal   
+    if 65<=code_char<=70: # verif si le code_char est entre 65 et 70 (si c'est  une lettre)
         code_char = code_char - 55 # si oui, retirer 55 a code_char
         result += code_char * (16**exposant) # puis multiplier par 16**exposant le code_char-55
-    elif 97<=code_char<=102:# verif si le code_char est entre 97 et 102
+    elif 97<=code_char<=102:# verif si le code_char est entre 97 et 102 (si c'est  une lettre)
         code_char = code_char - 87 # si oui, retirer 87 a code_char
         result += code_char * (16**exposant) # puis multiplier par 16**exposant le code_char-87
     else: # sinon
-        result += int(nbr[char_pos]) * (16**exposant) # multiplier par 16**exposant le caractère transformé en int() et l'ajouter a result
+        result += int(nbr[char_pos]) * (16**exposant) # multiplier par 16**exposant le caractère transformé en int() et l'ajouter a result (si c'est un nombre)
     exposant += 1 # ajouter un a l'exposant
     char_pos -= 1 # retirer 1 à char_pos
 
-# Base 10 --> 16
+# Base 10 --> 2
 binary="" # nombre binaire à 0
 i=0 # i a 0
 while result!=0: # tant que le résultat est différent de 0; si non, rien
@@ -40,4 +39,4 @@ while result!=0: # tant que le résultat est différent de 0; si non, rien
     result=result//2 # diviser result par 2
     i+=1 # ajouter 1 a i
 
-print("La conversition en base 2 est:", binary) # afficher le résultat binaire
+print("La conversion en base 2 est:", binary) # afficher le résultat binaire
