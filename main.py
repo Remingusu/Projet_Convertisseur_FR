@@ -40,4 +40,4 @@ while result!=0: # tant que le résultat est différent de 0; si non, rien
     result=result//2 # diviser result par 2
     i+=1 # ajouter 1 a i
 
-print("La conversition en base 2 est:", binary)
+print("La conversition en base 2 est:", binary) # afficher le résultat binaire
