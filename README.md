@@ -1,4 +1,7 @@
-# Projet_Convertisseur_FR
-Here is the project proposed by our teacher
+# Converter Project - *FR*
 
-Switch from hexadecimal to binary without using the related functions.
+This project is group work commissioned by the teacher (educational project).
+
+Ours was to transform a *Hexadecimal* number into *Binary*, without using the corresponding functions.
+
+I worked with @SKamRa and @y2o14x
